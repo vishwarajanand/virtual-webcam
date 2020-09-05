@@ -1,6 +1,7 @@
 // Ideally we'd use an editor or import shaders directly from the API.
 import { shaderFlicker } from './shader-flicker.js';
 import { shaderBW } from './shader-bw.js';
+import { shaderCartoonize } from './shader-cartoonize.js';
 
 class ShaderSettings {
 
@@ -45,6 +46,7 @@ class ShaderSettings {
         switch (this.filterSettingValue) {
             case "shader-bw": this.shader = shaderBW; break;
             case "shader-flicker": this.shader = shaderFlicker; break;
+            case "shader-cartoonize": this.shader = shaderCartoonize; break;
             default: this.shader = null;
         }
         return this.shader;

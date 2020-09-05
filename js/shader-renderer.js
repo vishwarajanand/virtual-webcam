@@ -75,7 +75,7 @@ class ShaderRenderer {
     if (!this.gl.getShaderParameter(shader, this.gl.COMPILE_STATUS)) {
       var info = this.gl.getShaderInfoLog(shader);
       console.log(info);
-      debugger;
+      // debugger;
       throw 'Could not compile WebGL program. \n\n' + info;
     }
     return shader;
