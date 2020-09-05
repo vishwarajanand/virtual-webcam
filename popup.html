@@ -1,0 +1,32 @@
+<html>
+
+<head>
+    <title>Virtual Webcam</title>
+    <script>
+        const filterSettingKey = "FilterSettingKey";
+        function storeUserPrefs(val) {
+            chrome.storage.sync.set({ filterSettingKey: val }, function () {
+                console.log('Saved', filterSettingKey, testPrefs);
+            });
+        }
+        let default_value = "shader-raw";
+        // storeUserPrefs(default_value);
+    </script>
+</head>
+
+<body>
+    <img src='./icons/icon-16.png' id='extensionImage'>
+    <button id='VirtualWebcamExtension_ShowDefault' onclick="setUserPrefs(default_value)">
+        Remove Filters (default)
+    </button>
+    <button id='VirtualWebcamExtension_ShowBW' onclick="storeUserPrefs('shader-bw')">Black and White Filter</button>
+    <button id='VirtualWebcamExtension_ShowFlicker' onclick="storeUserPrefs('shader-flicker')">Flicker</button>
+    <script src="js/settings.js"></script>
+    <br />
+    <br />
+    <iframe width="500" height="500" src="https://vishwarajanand.github.io/virtual-webcam/preview.html"></iframe>
+    <br />
+    <br />
+</body>
+
+</html>
