@@ -1,6 +1,6 @@
 # virtual-webcam chrome extension
 
-Chrome extension to mock webcam on chrome tabs with one of the following settings:
+Sample chrome extension to mock webcam on chrome tabs with one of the following settings:
 
 1. Black and White filter
 2. Distorted TV / Filcker
