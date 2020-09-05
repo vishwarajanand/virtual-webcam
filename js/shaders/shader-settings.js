@@ -1,6 +1,5 @@
 // Ideally we'd use an editor or import shaders directly from the API.
 import { shaderFlicker } from './shader-flicker.js';
-
 import { shaderBW } from './shader-bw.js';
 
 class ShaderSettings {
@@ -33,6 +32,7 @@ class ShaderSettings {
             });
         } else {
             // Fetch the appropriate shader setting from local web session
+            const filterSettingKey = "FilterSettingKey";
             // this.filterSettingValue = "shader-raw"; // default
             this.filterSettingValue = sessionStorage.getItem(filterSettingKey);
             console.log("Install the extension from root of this repo to see the renderers");

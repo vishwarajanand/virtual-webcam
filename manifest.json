@@ -10,6 +10,7 @@
   },
   "description": "Virtual webcam on all chrome tabs",
   "browser_action": {
+    "default_icon": "icons/icon-16.png",
     "default_popup": "popup.html"
   },
   "content_scripts": [
@@ -27,6 +28,7 @@
   "permissions": [
     "tabs",
     "storage",
+    "tabCapture",
     "<all_urls>"
   ],
   "manifest_version": 2,

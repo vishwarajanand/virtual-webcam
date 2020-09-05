@@ -2,33 +2,6 @@
 
 <head>
   <title>Virtual Webcam Demo Website</title>
-  <script>
-    const filterSettingKey = "FilterSettingKey";
-    const default_value = "shader-raw";
-
-    function setUserPrefs(val) {
-      sessionStorage.setItem(filterSettingKey, val);
-      getUserPrefs();
-      console.log(`Set preferred filter to : ${val}`);
-      resetVideo();
-    }
-
-    function getUserPrefs() {
-      let filterSettingValue = sessionStorage.getItem(filterSettingKey);
-      console.log(`Got preferred filter : ${filterSettingValue}`);
-    }
-
-    function resetVideo() {
-      let video = document.getElementById("video");
-      video.remove();
-      // init(); // says init not defined!
-      document.location.reload();
-    }
-
-    // getUserPrefs();
-    // resetVideo();
-    // storeUserPrefs(default_value);
-  </script>
   <script type="module">
     import { monkeyPatchMediaDevices } from './js/media-devices.js';
 
@@ -46,6 +19,8 @@
     }
 
     init();
+
+    export { init }
   </script>
 
   <div id="notes">
@@ -72,7 +47,8 @@
   <img src='./icons/icon-16.png' id='extensionImage'>
   <button id='VirtualWebcamExtension_ShowSample' onclick="setUserPrefs(default_value)">Remove Filters (default)</button>
   <button id='VirtualWebcamExtension_ShowBW' onclick="setUserPrefs('shader-bw')">Black and White Filter</button>
-  <button id='VirtualWebcamExtension_ShowFlicker' onclick="setUserPrefs('shader-flicker')">Flicker</button>
+  <button id='VirtualWebcamExtension_ShowFlicker' onclick="setUserPrefs('shader-flicker')">Flicker Filter</button>
+  <!-- To be used only in popup js -->
   <script src="js/settings.js"></script>
   <br />
   <br />
