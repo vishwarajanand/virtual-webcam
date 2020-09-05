@@ -6,6 +6,11 @@ Chrome extension to mock webcam on chrome tabs with one of the following setting
 2. Distorted TV / Filcker
 3. TODO: Pre Recorded video
 
+## Demo
+
+Hosted on Github Pages:
+**[https://vishwarajanand.github.io/virtual-webcam](https://vishwarajanand.github.io/virtual-webcam/)**
+
 ## Credits:
 
 This is based on [virtual-webcam](https://github.com/spite/virtual-webcam) GitHub repo.
