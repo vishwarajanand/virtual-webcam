@@ -1,8 +1,6 @@
 import { FilterStream } from './filter-stream.js';
 
-// Ideally we'd use an editor or import shaders directly from the API.
-import { distortedTV as shader } from './distorted-tv.js';
-//import { moneyFilter as shader } from './money-filter.js';
+import { ShaderSettings } from './shaders/shader-settings.js';
 
 function monkeyPatchMediaDevices() {
 
@@ -46,8 +44,13 @@ function monkeyPatchMediaDevices() {
           constraints
         );
         if (res) {
-          const filter = new FilterStream(res, shader);
-          return filter.outputStream;
+          let shaderFctory = new ShaderSettings();
+          let shader = shaderFctory.getShader();
+          if (shader !== null) {
+            const filter = new FilterStream(res, shader);
+            // const filter = new CustomVideoStream(res, shader);
+            return filter.outputStream;
+          }
         }
       }
     }

@@ -1,15 +1,15 @@
 // "Money filter" by @giacomopc https://shadertoy.com/view/XlsXDN
 
-const moneyFilter = `
+const shaderBW = `
     void mainImage( out vec4 fragColor, in vec2 fragCoord )
   {
       vec2 xy = fragCoord.xy / iResolution.yy;
       
-      float amplitud = 0.03;
-      float frecuencia = 10.0;
-      float gris = 1.0;
-      float divisor = 4.8 / iResolution.y;
-      float grosorInicial = divisor * 0.2;
+      float amplitud = 0.01;
+      float frecuencia = 100.0;
+      float gris = 0.9;
+      float divisor = 0.8 / iResolution.y;
+      float grosorInitial = divisor * 0.9;
       
       const int kNumPatrones = 6;
       
@@ -34,7 +34,7 @@ const moneyFilter = `
               xy.x * seno + xy.y * coseno
           );
   
-          float grosor = grosorInicial * float(i + 1);
+          float grosor = grosorInitial * float(i + 1);
           float dist = mod(punto.y + grosor * 0.5 - sin(punto.x * frecuencia) * amplitud, divisor);
           float brillo = 0.3 * color.r + 0.4 * color.g + 0.3 * color.b;
   
@@ -52,4 +52,4 @@ const moneyFilter = `
   }
  `;
 
-export { moneyFilter }
+export { shaderBW }

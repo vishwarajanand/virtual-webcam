@@ -1,13 +1,13 @@
 // "Distorted TV" by ehj1 https://shadertoy.com/view/ldXGW4
 
-const distortedTV = `
+const shaderFlicker = `
 // change these values to 0.0 to turn off individual effects
-float vertJerkOpt = 1.0;
-float vertMovementOpt = 1.0;
-float bottomStaticOpt = 1.0;
-float scalinesOpt = 1.0;
-float rgbOffsetOpt = 1.0;
-float horzFuzzOpt = 1.0;
+float vertJerkOpt = 0.9;
+float vertMovementOpt = 0.9;
+float bottomStaticOpt = 0.5;
+float scalinesOpt = 0.5;
+float rgbOffsetOpt = 0.5;
+float horzFuzzOpt = 0.9;
 
 // Noise generation functions borrowed from: 
 // https://github.com/ashima/webgl-noise/blob/master/src/noise2D.glsl
@@ -122,4 +122,4 @@ void mainImage( out vec4 fragColor, in vec2 fragCoord )
 }
 `;
 
-export { distortedTV }
+export { shaderFlicker }

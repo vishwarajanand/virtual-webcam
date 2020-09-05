@@ -1,8 +1,18 @@
 # virtual-webcam chrome extension
 
-This is a proof of concept of adding a virtual MediaDevice in a browser extension.
+Chrome extension to mock webcam on chrome tabs with one of the following settings:
 
-NOTE: You can use it as a regular library, check out cam.html.
+1. Black and White filter
+2. Distorted TV / Filcker
+3. TODO: Pre Recorded video
+
+## Credits:
+
+This is based on [virtual-webcam](https://github.com/spite/virtual-webcam) GitHub repo.
+
+NOTE: You can use it as a regular library, check out index.html.
+
+## Details from previous ReadMe
 
 ![Virtual webcam](shader-cam.png)
 
