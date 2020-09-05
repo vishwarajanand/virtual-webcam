@@ -29,6 +29,8 @@ NOTE: You can use it as a regular library, check out index.html.
 ## Flicker filter
 ![Preview](https://github.com/vishwarajanand/virtual-webcam/blob/master/demos/flicker.png?raw=true "Preview")
 
+## Cartoonize filter
+![Preview](https://github.com/vishwarajanand/virtual-webcam/blob/master/demos/cartoonize.png?raw=true "Preview")
 
 ## Details from previous ReadMe
 
