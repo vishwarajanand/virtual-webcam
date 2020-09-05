@@ -2,9 +2,34 @@
 const filterSettingKey = "FilterSettingKey";
 const default_value = "shader-raw";
 
+function setButtonColor(filterSettingValue) {
+    var selectedButtons = document.getElementsByClassName(`btn_filter_select ${filterSettingValue}`);
+    if (selectedButtons.length <= 0) {
+        document.getElementsByClassName(`btn_filter_select default`)[0].setAttribute("style", "background-color: green;");
+    } else {
+        selectedButtons[0].setAttribute("style", "background-color: green;");
+    }
+}
+
 function getUserPrefs() {
-    let filterSettingValue = sessionStorage.getItem(filterSettingKey);
-    console.log(`Got preferred filter : ${filterSettingValue}`);
+    let filterSettingValue = default_value;
+
+    if (chrome.storage) {
+        // Get the appropriate shader setting for chrome extensions
+        this.filterSettingValue = sessionStorage.getItem(filterSettingKey);
+
+        chrome.storage.sync.get([this.filterSettingKey], function (result) {
+            this.filterSettingValue = result.key;
+            setButtonColor(this.filterSettingValue);
+            console.log('Value currently is ' + result.key);
+        });
+        console.log(`Got preferred filter : ${this.filterSettingValue}`);
+    } else {
+        // Get the appropriate shader setting for local web session
+        this.filterSettingValue = sessionStorage.getItem(filterSettingKey);
+        setButtonColor(this.filterSettingValue);
+        console.log(`Got preferred filter : ${this.filterSettingValue}`);
+    }
 }
 
 function resetVideo() {
@@ -32,3 +57,4 @@ function setUserPrefs(val) {
     }
 }
 // setUserPrefs(default_value);
+getUserPrefs();

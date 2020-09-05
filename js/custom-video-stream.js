@@ -1,5 +1,6 @@
 import { ShaderRenderer } from './shader-renderer.js';
 
+// TODO: code pointer to show how a custom video can be shown instead of camera input
 class CustomVideoStream {
   constructor(stream, shader) {
     console.log("New Filter for stream", stream);

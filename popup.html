@@ -6,11 +6,16 @@
 
 <body>
     <img src='./icons/icon-16.png' id='extensionImage'>
-    <button id='VirtualWebcamExtension_ShowSample' onclick="setUserPrefs(default_value)">Remove Filters
-        (default)</button>
-    <button id='VirtualWebcamExtension_ShowBW' onclick="setUserPrefs('shader-bw')">Black and White Filter</button>
-    <button id='VirtualWebcamExtension_ShowFlicker' onclick="setUserPrefs('shader-flicker')">Flicker Filter</button>
-    <button id='VirtualWebcamExtension_ShowCartoonize' onclick="storeUserPrefs('shader-cartoonize')">Cartoonize
+    <button id='VirtualWebcamExtension_ShowSample' onclick="setUserPrefs(default_value)"
+        class="btn_filter_select default">Remove
+        Filters (default)</button>
+    <button id='VirtualWebcamExtension_ShowBW' onclick="setUserPrefs('shader-bw')"
+        class="btn_filter_select shader-bw">Black and
+        White Filter</button>
+    <button id='VirtualWebcamExtension_ShowFlicker' onclick="setUserPrefs('shader-flicker')"
+        class="btn_filter_select shader-flicker">Flicker Filter</button>
+    <button id='VirtualWebcamExtension_ShowCartoonize' onclick="setUserPrefs('shader-cartoonize')"
+        class="btn_filter_select shader-cartoonize">Cartoonize
         Filter</button>
     <br />
     <br />
