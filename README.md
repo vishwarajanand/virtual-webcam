@@ -17,9 +17,20 @@ This is based on [virtual-webcam](https://github.com/spite/virtual-webcam) GitHu
 
 NOTE: You can use it as a regular library, check out index.html.
 
-## Details from previous ReadMe
 
-![Virtual webcam](shader-cam.png)
+# Previews
+
+## Default
+![Preview](https://github.com/vishwarajanand/virtual-webcam/blob/master/demos/default.png?raw=true "Preview")
+
+## Black and White filter
+![Preview](https://github.com/vishwarajanand/virtual-webcam/blob/master/demos/bnw.png?raw=true "Preview")
+
+## Flicker filter
+![Preview](https://github.com/vishwarajanand/virtual-webcam/blob/master/demos/flicker.png?raw=true "Preview")
+
+
+## Details from previous ReadMe
 
 To use (Chromium):
 - download or clone the repo
